@@ -2552,10 +2552,10 @@ QrCode.prototype.createVCard = function (vCard) {
         vCard.otherPhone.forEach(
             function (number) {
                 if (majorVersion >= 4) {
-                    formattedVCardString += 'TEL;VALUE=uri;TYPE="voice,other":tel:' + e(number) + nl();
+                    formattedVCardString += 'TEL;VALUE=uri;TYPE="CELL":' + e(number) + nl();
 
                 } else {
-                    formattedVCardString += 'TEL;TYPE=OTHER:' + e(number) + nl();
+                    formattedVCardString += 'TEL;TYPE=CELL:' + e(number) + nl();
                 }
             }
         );
